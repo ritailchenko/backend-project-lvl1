@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/ritailchenko/backend-project-lvl1#readme",
   "dependencies": {
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.20",
+    "readline-sync": "^1.4.10"
   },
   "devDependencies": {
     "eslint": "^7.8.1"
