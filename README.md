@@ -4,5 +4,5 @@
 
 
 
-![](https://github.com/ritailchenko/backend-project-lvl1/workflows/make lint/badge.svg)
+![](https://github.com/ritailchenko/backend-project-lvl1/workflows/make%20lint/badge.svg)
 
