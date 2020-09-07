@@ -1,10 +1,5 @@
 name: make lint
 
-# on:
-#   push:
-#     branches: [master]
-#   pull_request:
-#     branches: [master]
 # on pull of push request of these branches do the following work flow. These is what trigges workflow
 on:
   pull_request:
@@ -12,9 +7,6 @@ on:
     branches:
       - master
       - develop
-
-# jobs: run: |
-#   make lint
 
 jobs:
   eslint:
