@@ -4,5 +4,5 @@
 
 
 
-<a href="https://github.com/ritailchenko/backend-project-lvl1/workflows/make lint/badge.svg"></a>
+[![](https://github.com/ritailchenko/backend-project-lvl1/workflows/make lint/badge.svg)]())
 
