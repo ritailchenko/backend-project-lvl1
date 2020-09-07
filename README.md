@@ -4,4 +4,5 @@
 
 
 
-https://github.com/ritailchenko/backend-project-lvl1/workflows/make lint/badge.svg
+<a href="https://github.com/ritailchenko/backend-project-lvl1/workflows/make lint/badge.svg"></a>
+
