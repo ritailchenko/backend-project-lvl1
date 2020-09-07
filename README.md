@@ -4,4 +4,4 @@
 
 
 
-<a href="https://github.com/ritailchenko/backend-project-lvl1/workflows/make lint/badge.svg"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
+https://github.com/ritailchenko/backend-project-lvl1/workflows/make lint/badge.svg
