@@ -1,6 +1,6 @@
 name: make lint
 
-# on pull of push request of these branches do the following work flow. These is what trigges workflow
+# on pull of push request of these branches do the following work flow. These is what triggers workflow
 on:
   pull_request:
   push:
