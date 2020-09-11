@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import biggestGcd from '../src/gcd.js';
+import biggestGcd from '../src/games/gcd.js';
 
 console.log('Find the greatest common divisor of given numbers.');
 

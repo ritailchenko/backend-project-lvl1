@@ -2,8 +2,8 @@
 const ifEven = (answer, num) => {
   if (
     // eslint-disable-next-line operator-linebreak
-    (num % 2 === 0 && answer === 'y') ||
-    (num % 2 !== 0 && answer === 'n')
+    (num % 2 === 0 && answer === 'yes') ||
+    (num % 2 !== 0 && answer === 'no')
   ) {
     return true;
     // eslint-disable-next-line no-else-return

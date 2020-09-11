@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-import { excludedNum, printProgression } from '../src/progression.js';
+import { excludedNum, printProgression } from '../src/games/progression.js';
 
 console.log('What number is missing in the progression?');
 

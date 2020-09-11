@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-import randMathExpression from '../src/randMathExpression.js';
+import randMathExpression from '../src/games/randMathExpression.js';
 
 const mathOperations = ['*', '+', '-'];
 

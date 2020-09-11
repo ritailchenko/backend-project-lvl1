@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 // import name from './brain-games';
-import ifEven from '../src/ifEven.js';
+import ifEven from '../src/games/ifEven.js';
 
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
@@ -17,7 +17,7 @@ for (let i = 0; i < 3; i += 1) {
     console.log('Correct!');
     count += 1;
   } else {
-    console.log(`${yourAnswer} is wrong answer ;(. Correct answer was "no".
+    console.log(`${yourAnswer} is wrong answer ;(.
       
       Let's try again!`);
     // console.log(`${yourAnswer} is wrong answer ;(. Correct answer was "no".
