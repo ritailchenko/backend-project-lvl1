@@ -6,4 +6,4 @@
 
 ![](https://github.com/ritailchenko/backend-project-lvl1/workflows/make%20lint/badge.svg)
 
-https://asciinema.org/a/VsIQRnM5ofx37Cg3Ln9bO8Vrc
+[brain-even](https://asciinema.org/a/9uqgQsSCkLJRcs5ZD27j5gXxF)
