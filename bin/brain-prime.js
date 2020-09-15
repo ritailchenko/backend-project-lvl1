@@ -1,7 +1,13 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-
+import greeting from '../src/games/cli.js';
 import isPrime from '../src/games/prime.js';
+
+console.log('Welcome to the Brain Games!');
+
+const name = readlineSync.question('May I have your name?');
+
+console.log(`Hi, ${greeting(name)}!`);
 
 console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
@@ -29,5 +35,5 @@ for (let i = 0; i < 3; i += 1) {
 }
 
 if (count === 3) {
-  console.log('Congratulations, you won!');
+  console.log(`Congratulations, ${greeting(name)} you won!`);
 }

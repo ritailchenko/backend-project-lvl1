@@ -1,6 +1,13 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import greeting from '../src/games/cli.js';
 import biggestGcd from '../src/games/gcd.js';
+
+console.log('Welcome to the Brain Games!');
+
+const name = readlineSync.question('May I have your name?');
+
+console.log(`Hi, ${greeting(name)}!`);
 
 console.log('Find the greatest common divisor of given numbers.');
 
@@ -33,5 +40,5 @@ for (let i = 0; i < 3; i += 1) {
 }
 
 if (count === 3) {
-  console.log('Congratulations, you won!');
+  console.log(`Congratulations, ${greeting(name)} you won!`);
 }

@@ -1,14 +1,16 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-
+import greeting from '../src/games/cli.js';
 import randMathExpression from '../src/games/randMathExpression.js';
 
-const mathOperations = ['*', '+', '-'];
+console.log('Welcome to the Brain Games!');
+
+const name = readlineSync.question('May I have your name?');
+
+console.log(`Hi, ${greeting(name)}!`);
 
 console.log('What is the result of the expression?');
-
-// console.log(yourAnswer);
-// console.log(compAnswer);
+const mathOperations = ['*', '+', '-'];
 
 let count = 0;
 for (let i = 0; i < 3; i += 1) {
@@ -45,5 +47,5 @@ for (let i = 0; i < 3; i += 1) {
 }
 
 if (count === 3) {
-  console.log('Congratulations, you won!');
+  console.log(`Congratulations, ${greeting(name)} you won!`);
 }

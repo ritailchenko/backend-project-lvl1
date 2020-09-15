@@ -1,7 +1,13 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-
+import greeting from '../src/games/cli.js';
 import { excludedNum, printProgression } from '../src/games/progression.js';
+
+console.log('Welcome to the Brain Games!');
+
+const name = readlineSync.question('May I have your name?');
+
+console.log(`Hi, ${greeting(name)}!`);
 
 console.log('What number is missing in the progression?');
 
@@ -19,7 +25,6 @@ for (let i = 0; i < 3; i += 1) {
   console.log(progressionWithMissingNum);
 
   const yourAnswer = parseInt(readlineSync.question('Your answer: '), 10);
-  console.log(yourAnswer);
 
   if (excludedNum(randNum) === yourAnswer) {
     count += 1;
@@ -38,5 +43,5 @@ for (let i = 0; i < 3; i += 1) {
 }
 
 if (count === 3) {
-  console.log('Congratulations, you won!');
+  console.log(`Congratulations, ${greeting(name)} you won!`);
 }

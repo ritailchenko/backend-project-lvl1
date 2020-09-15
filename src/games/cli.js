@@ -1,5 +1,7 @@
 const greeting = (name) => {
-  console.log(`Hi, ${name.toUpperCase()}, welcome to the game!`);
+  const nameCapitalized = name.charAt(0).toUpperCase() + name.slice(1);
+
+  return nameCapitalized;
 };
 
 export default greeting;
