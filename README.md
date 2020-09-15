@@ -6,5 +6,4 @@
 
 ![](https://github.com/ritailchenko/backend-project-lvl1/workflows/make%20lint/badge.svg)
 
-[![asciicast](https://asciinema.org/a/VsIQRnM5ofx37Cg3Ln9bO8Vrc.svg)](https://asciinema.org/a/VsIQRnM5ofx37Cg3Ln9bO8Vrc)
-
+https://asciinema.org/a/VsIQRnM5ofx37Cg3Ln9bO8Vrc
