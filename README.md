@@ -12,7 +12,7 @@
 
 ## Запуск игры
 [brain-even](https://asciinema.org/a/9uqgQsSCkLJRcs5ZD27j5gXxF) <br /><br />
-![Brain even](/game-screenshots/brain-even.png)<br /><br />
+[![asciicast](https://asciinema.org/a/9uqgQsSCkLJRcs5ZD27j5gXxF.svg)](https://asciinema.org/a/9uqgQsSCkLJRcs5ZD27j5gXxF)<br /><br />
 
 # Игра: "Калькулятор"
 
@@ -20,7 +20,7 @@
 
 ## Запуск игры
 [brain-calc]( https://asciinema.org/a/IkpgNjUxTo2FvQ5SnwREp0Leq) <br /><br />
-![Brain calc](/game-screenshots/brain-calc.png)<br /><br />
+[![asciicast](https://asciinema.org/a/IkpgNjUxTo2FvQ5SnwREp0Leq.svg)](https://asciinema.org/a/IkpgNjUxTo2FvQ5SnwREp0Leq)<br /><br />
 
 ## Игра: "НОД"
 
@@ -28,7 +28,7 @@
 
 ## Запуск игры
 [brain-gcd](https://asciinema.org/a/w8B21wTApvLvKdhphLk8QIRRP) <br /><br />
-![Brain gcd](/game-screenshots/brain-bcd.png)<br /><br />
+[![asciicast](https://asciinema.org/a/w8B21wTApvLvKdhphLk8QIRRP.svg)](https://asciinema.org/a/w8B21wTApvLvKdhphLk8QIRRP)<br /><br />
 
 ## Игра: "Арифметическая прогрессия"
 
@@ -36,7 +36,7 @@
 
 ## Запуск игры
 [brain-progression](https://asciinema.org/a/EJ5bPFtINxe6zIQaeIEr0bIJN) <br /><br />
-![Brain progression](/game-screenshots/brain-progression.png)<br /><br />
+[![asciicast](https://asciinema.org/a/EJ5bPFtINxe6zIQaeIEr0bIJN.svg)](https://asciinema.org/a/EJ5bPFtINxe6zIQaeIEr0bIJN)<br /><br />
 
 ## Игра: "Простое ли число"
 
