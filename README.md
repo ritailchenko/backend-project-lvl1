@@ -21,6 +21,27 @@
 ## Запуск игры
 [brain-calc]( https://asciinema.org/a/IkpgNjUxTo2FvQ5SnwREp0Leq) <br /><br />
 ![Brain calc](/game-screenshots/brain-calc.png)<br /><br />
-[brain-gcd](https://asciinema.org/a/w8B21wTApvLvKdhphLk8QIRRP) <br />
-[brain-progression](https://asciinema.org/a/EJ5bPFtINxe6zIQaeIEr0bIJN) <br />
-[brain-prime](https://asciinema.org/a/aijzcT6NDfadNW0axfRGUsTKS) <br />
+
+## Игра: "НОД"
+
+#### Задача игрока - для двух случайных чисел найти их наибольший общий делитель
+
+## Запуск игры
+[brain-gcd](https://asciinema.org/a/w8B21wTApvLvKdhphLk8QIRRP) <br /><br />
+![Brain gcd](/game-screenshots/brain-bcd.png)<br /><br />
+
+## Игра: "Арифметическая прогрессия"
+
+#### Задача игрока - найти отсутствующее число в арифметической прогрессии
+
+## Запуск игры
+[brain-progression](https://asciinema.org/a/EJ5bPFtINxe6zIQaeIEr0bIJN) <br /><br />
+![Brain progression](/game-screenshots/brain-progression.png)<br /><br />
+
+## Игра: "Простое ли число"
+
+#### Задача игрока - определить простое ли число
+
+## Запуск игры
+[brain-prime](https://asciinema.org/a/aijzcT6NDfadNW0axfRGUsTKS) <br /><br />
+![Brain prime](/game-screenshots/brain-prime.png)<br /><br />
