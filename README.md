@@ -20,7 +20,7 @@
 
 ## Запуск игры
 [brain-calc]( https://asciinema.org/a/IkpgNjUxTo2FvQ5SnwREp0Leq) <br /><br />
-![Brain calc](/game-screenshots/brain-calc)<br /><br />
+![Brain calc](/game-screenshots/brain-calc.png)<br /><br />
 [brain-gcd](https://asciinema.org/a/w8B21wTApvLvKdhphLk8QIRRP) <br />
 [brain-progression](https://asciinema.org/a/EJ5bPFtINxe6zIQaeIEr0bIJN) <br />
 [brain-prime](https://asciinema.org/a/aijzcT6NDfadNW0axfRGUsTKS) <br />
