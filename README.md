@@ -7,6 +7,10 @@
 ![](https://github.com/ritailchenko/backend-project-lvl1/workflows/make%20lint/badge.svg)
 
 # Игра: "Проверка на четность"
+
+# Задача игрока - ответить "yes" если число четное, и "no", если число нечетное
+
+## Запуск игры
 [brain-even](https://asciinema.org/a/9uqgQsSCkLJRcs5ZD27j5gXxF) <br />
 [brain-calc]( https://asciinema.org/a/IkpgNjUxTo2FvQ5SnwREp0Leq) <br />
 [brain-gcd](https://asciinema.org/a/w8B21wTApvLvKdhphLk8QIRRP) <br />
