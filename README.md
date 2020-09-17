@@ -12,7 +12,7 @@
 
 ## Запуск игры
 [brain-even](https://asciinema.org/a/9uqgQsSCkLJRcs5ZD27j5gXxF) <br />
-![Brain even](/game-screenshots/brain-even)
+![Brain even](/game-screenshots/brain-even.png)
 [brain-calc]( https://asciinema.org/a/IkpgNjUxTo2FvQ5SnwREp0Leq) <br />
 [brain-gcd](https://asciinema.org/a/w8B21wTApvLvKdhphLk8QIRRP) <br />
 [brain-progression](https://asciinema.org/a/EJ5bPFtINxe6zIQaeIEr0bIJN) <br />
