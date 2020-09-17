@@ -44,4 +44,4 @@
 
 ## Запуск игры
 [brain-prime](https://asciinema.org/a/aijzcT6NDfadNW0axfRGUsTKS) <br /><br />
-![Brain prime](/game-screenshots/brain-prime.png)<br /><br />
+[![asciicast](https://asciinema.org/a/aijzcT6NDfadNW0axfRGUsTKS.svg)](https://asciinema.org/a/aijzcT6NDfadNW0axfRGUsTKS)
