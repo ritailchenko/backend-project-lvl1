@@ -12,8 +12,15 @@
 
 ## Запуск игры
 [brain-even](https://asciinema.org/a/9uqgQsSCkLJRcs5ZD27j5gXxF) <br /><br />
-![Brain even](/game-screenshots/brain-even.png)
-[brain-calc]( https://asciinema.org/a/IkpgNjUxTo2FvQ5SnwREp0Leq) <br />
+![Brain even](/game-screenshots/brain-even.png)<br /><br />
+
+# Игра: "Калькулятор"
+
+#### Задача игрока - вычислить случайное математическое выражение и записать правильный ответ
+
+## Запуск игры
+[brain-calc]( https://asciinema.org/a/IkpgNjUxTo2FvQ5SnwREp0Leq) <br /><br />
+![Brain сфдс](/game-screenshots/brain-calc.png)<br /><br />
 [brain-gcd](https://asciinema.org/a/w8B21wTApvLvKdhphLk8QIRRP) <br />
 [brain-progression](https://asciinema.org/a/EJ5bPFtINxe6zIQaeIEr0bIJN) <br />
 [brain-prime](https://asciinema.org/a/aijzcT6NDfadNW0axfRGUsTKS) <br />
