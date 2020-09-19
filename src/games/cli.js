@@ -1,7 +1,11 @@
-const greeting = (name) => {
-  const nameCapitalized = name.charAt(0).toUpperCase() + name.slice(1);
+import readlineSync from 'readline-sync';
 
-  return nameCapitalized;
+const greeting = () => {
+  console.log('Welcome to the brain games!');
+
+  const name = readlineSync.question('what is your name?');
+
+  console.log(`Hi, ${name.charAt(0).toUpperCase() + name.slice(1)}!`);
 };
 
 export default greeting;

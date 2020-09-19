@@ -3,11 +3,12 @@ import readlineSync from 'readline-sync';
 import greeting from '../src/games/cli.js';
 import ifEven from '../src/games/ifEven.js';
 
-console.log('Welcome to the Brain Games!');
+// console.log('Welcome to the Brain Games!');
 
-const name = readlineSync.question('May I have your name?');
+// const name = readlineSync.question('May I have your name?');
 
-console.log(`Hi, ${greeting(name)}!`);
+// console.log(`Hi, ${greeting(name)}!`);
+greeting();
 
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 

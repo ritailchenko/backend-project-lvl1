@@ -1,16 +1,18 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
+// import readlineSync from 'readline-sync';
 import greeting from '../src/games/cli.js';
 
-console.log('Welcome to the brain games!');
+greeting();
 
-const name = readlineSync.question('what is your name?');
-greeting(name);
+// console.log('Welcome to the brain games!');
 
-const gameToPlay = readlineSync.question('Which game you would like to play?');
+// const name = readlineSync.question('what is your name?');
+// greeting(name);
 
-if (gameToPlay === 'brain-even') {
-  console.log('lets play brain-even'); // и запускается brain-even
-}
+// const gameToPlay = readlineSync.question('Which game you would like to play?');
 
-export default name;
+// if (gameToPlay === 'brain-even') {
+//   console.log('lets play brain-even'); // и запускается brain-even
+// }
+
+// export default name;
