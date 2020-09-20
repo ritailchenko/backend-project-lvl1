@@ -13,7 +13,8 @@ const calcGame = () => {
     }
     return result;
   };
-  console.log('What is the result of the expression?');
+  // let questionToStartTheGame = 'What is the result of the expression?';
+  // console.log('What is the result of the expression?');
   const mathOperations = ['*', '+', '-'];
 
   const randNumOne = Math.floor(Math.random() * Math.floor(100));

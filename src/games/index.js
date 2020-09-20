@@ -1,7 +1,8 @@
 import greeting from './cli.js';
 
-const startGame = (func) => {
+const startGame = (func, question) => {
   greeting();
+  console.log(question);
   let count = 0;
   while (count < 3) {
     if (func()) {
