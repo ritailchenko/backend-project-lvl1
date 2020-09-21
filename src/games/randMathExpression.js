@@ -14,7 +14,7 @@ const calcGame = () => {
     return result;
   };
   // let questionToStartTheGame = 'What is the result of the expression?';
-  // console.log('What is the result of the expression?');
+  console.log('What is the result of the expression?');
   const mathOperations = ['*', '+', '-'];
 
   const randNumOne = Math.floor(Math.random() * Math.floor(100));
@@ -27,15 +27,16 @@ const calcGame = () => {
     `Question: ${randNumOne} ${randMathOperation} ${randNumTwo}`
   );
   console.log(question);
+  const yourAnswer = parseInt(readlineSync.question('Your answer: '), 10);
   // console.log(randMathExpression(randMathOperation, randNumOne, randNumTwo));
-  return randMathExpression();
-  // const yourAnswer = parseInt(readlineSync.question('Your answer: '), 10);
-  //   if (
-  //     randMathExpression(randMathOperation, randNumOne, randNumTwo) === yourAnswer
-  //   ) {
-  //     return true;
-  //   }
-  //   return false;
+
+  if (
+    randMathExpression(randMathOperation, randNumOne, randNumTwo) === yourAnswer
+  ) {
+    return true;
+  }
+  return false;
+  // return randMathExpression();
 };
 // calcGame();
 

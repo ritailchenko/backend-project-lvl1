@@ -1,14 +1,13 @@
 // import readlineSync from 'readline-sync';
 import greeting from './cli.js';
 
-const startGame = (func, question, yourAnswer) => {
+const startGame = (func) => {
   greeting();
-  console.log(question);
+
   let count = 0;
 
   while (count < 3) {
-    // const yourAnswer = parseInt(readlineSync.question('Your answer: '), 10);
-    if (func() === yourAnswer) {
+    if (func()) {
       count += 1;
       console.log('Correct!');
     } else {
