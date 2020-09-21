@@ -27,14 +27,16 @@ const calcGame = () => {
     `Question: ${randNumOne} ${randMathOperation} ${randNumTwo}`
   );
   console.log(question);
-
-  const yourAnswer = parseInt(readlineSync.question('Your answer: '), 10);
-  if (
-    randMathExpression(randMathOperation, randNumOne, randNumTwo) === yourAnswer
-  ) {
-    return true;
-  }
-  return false;
+  // console.log(randMathExpression(randMathOperation, randNumOne, randNumTwo));
+  return randMathExpression();
+  // const yourAnswer = parseInt(readlineSync.question('Your answer: '), 10);
+  //   if (
+  //     randMathExpression(randMathOperation, randNumOne, randNumTwo) === yourAnswer
+  //   ) {
+  //     return true;
+  //   }
+  //   return false;
 };
+// calcGame();
 
 export default calcGame;
