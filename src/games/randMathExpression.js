@@ -1,20 +1,20 @@
 import readlineSync from 'readline-sync';
+import startGame from './index.js';
 
-const calcGame = () => {
-  const randMathExpression = (randMathOperation, randNumOne, randNumTwo) => {
-    let result = 0;
+const randMathExpression = (randMathOperation, randNumOne, randNumTwo) => {
+  let result = 0;
 
-    if (randMathOperation === '+') {
-      result = randNumOne + randNumTwo;
-    } else if (randMathOperation === '-') {
-      result = randNumOne - randNumTwo;
-    } else if (randMathOperation === '*') {
-      result = randNumOne * randNumTwo;
-    }
-    return result;
-  };
-  // let questionToStartTheGame = 'What is the result of the expression?';
-  console.log('What is the result of the expression?');
+  if (randMathOperation === '+') {
+    result = randNumOne + randNumTwo;
+  } else if (randMathOperation === '-') {
+    result = randNumOne - randNumTwo;
+  } else if (randMathOperation === '*') {
+    result = randNumOne * randNumTwo;
+  }
+  return result;
+};
+
+const generateQuestion = () => {
   const mathOperations = ['*', '+', '-'];
 
   const randNumOne = Math.floor(Math.random() * Math.floor(100));
@@ -26,18 +26,24 @@ const calcGame = () => {
     // eslint-disable-next-line comma-dangle
     `Question: ${randNumOne} ${randMathOperation} ${randNumTwo}`
   );
-  console.log(question);
-  const yourAnswer = parseInt(readlineSync.question('Your answer: '), 10);
-  // console.log(randMathExpression(randMathOperation, randNumOne, randNumTwo));
+  // console.log(question);
+  // const yourAnswer = parseInt(readlineSync.question('Your answer: '), 10);
 
-  if (
-    randMathExpression(randMathOperation, randNumOne, randNumTwo) === yourAnswer
-  ) {
-    return true;
-  }
-  return false;
+  // if (
+  //   randMathExpression(randMathOperation, randNumOne, randNumTwo) === yourAnswer
+  // ) {
+  //   return true;
+  // }
+  // return false;
   // return randMathExpression();
+  return question;
 };
+
+const yourAnswer = () => {
+  const answer = parseInt(readlineSync.question('Your answer: '), 10);
+  return answer;
+};
+startGame(randMathExpression, yourAnswer, generateQuestion);
 // calcGame();
 
-export default calcGame;
+export default startGame;
