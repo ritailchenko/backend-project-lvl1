@@ -41,10 +41,10 @@ const calcGame = () => {
     // eslint-disable-next-line comma-dangle
     `Question: ${randNumOne} ${randMathOperation} ${randNumTwo}`
   );
-  const yourAnswer = parseInt(readlineSync.question('Your answer: '), 10);
+
   const correctAnswer = randMathExpression();
   // return randMathOperation;
-  startGame(question, correctAnswer, yourAnswer);
+  startGame(question, correctAnswer);
 };
 
 export default calcGame;
