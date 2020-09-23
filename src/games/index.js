@@ -1,4 +1,4 @@
-// import readlineSync from 'readline-sync';
+import readlineSync from 'readline-sync';
 
 // export default (question, answer) => {
 // question = how many 1 + 1
@@ -13,11 +13,12 @@
 // };
 import greeting from './cli.js';
 
-const startGame = (question, correctAnswer, yourAnswer) => {
+const startGame = (question, correctAnswer) => {
   greeting();
   console.log('What is the result of the expression?');
 
   console.log(question);
+  const yourAnswer = parseInt(readlineSync.question('Your answer: '), 10);
   console.log(yourAnswer);
 
   let count = 0;
