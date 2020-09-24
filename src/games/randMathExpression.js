@@ -1,4 +1,4 @@
-import readlineSync from 'readline-sync';
+// import readlineSync from 'readline-sync';
 import startGame from './index.js';
 
 // import runGame from './index';
@@ -28,64 +28,36 @@ const randMathExpression = (randMathOperation, randNumOne, randNumTwo) => {
   return result;
 };
 
-const calcGame = () => {
+const generateMathRandom = () => {
   const mathOperations = ['*', '+', '-'];
 
   const randNumOne = Math.floor(Math.random() * Math.floor(100));
   const randNumTwo = Math.floor(Math.random() * Math.floor(100));
-  // eslint-disable-next-line operator-linebreak
   const randMathOperation =
     mathOperations[Math.floor(Math.random() * Math.floor(3))];
-  // const question = `Question: ${randNumOne} ${randMathOperation} ${randNumTwo}`;
-  // const question = readlineSync.question(
-  //   // eslint-disable-next-line comma-dangle
-  //   `Question: ${randNumOne} ${randMathOperation} ${randNumTwo}`
-  // );
 
   const question = `Question: ${randNumOne} ${randMathOperation} ${randNumTwo}`;
-
-  const correctAnswer = randMathExpression(
-    randMathOperation,
+  // return question;
+  return {
     randNumOne,
-    randNumTwo
-  );
-  // console.log(correctAnswer);
-  // return randMathOperation;
-  startGame(question, correctAnswer);
+    randNumTwo,
+    randMathOperation,
+  };
 };
-// calcGame();
-export default calcGame;
+
+const { randNumOne, randNumTwo, randMathOperation } = generateMathRandom();
 
 // const generateQuestion = () => {
-//   const mathOperations = ['*', '+', '-'];
-
-//   const randNumOne = Math.floor(Math.random() * Math.floor(100));
-//   const randNumTwo = Math.floor(Math.random() * Math.floor(100));
-//   // eslint-disable-next-line operator-linebreak
-//   const randMathOperation =
-//     mathOperations[Math.floor(Math.random() * Math.floor(3))];
-//   const question = readlineSync.question(
-//     // eslint-disable-next-line comma-dangle
-//     `Question: ${randNumOne} ${randMathOperation} ${randNumTwo}`
-//   );
-//   console.log(question);
-//   // const yourAnswer = parseInt(readlineSync.question('Your answer: '), 10);
-
-//   // if (
-//   //   randMathExpression(randMathOperation, randNumOne, randNumTwo) === yourAnswer
-//   // ) {
-//   //   return true;
-//   // }
-//   // return false;
-//   return randMathExpression();
-//   // return question;
+//   const question = `Question: ${randNumOne} ${randMathOperation} ${randNumTwo}`;
+//   return question;
 // };
+console.log(randNumOne, randNumTwo, randMathOperation);
+const correctAnswer = randMathExpression(
+  randMathOperation,
+  randNumOne,
+  randNumTwo
+);
 
-// const yourAnswer = () => {
-//   const answer = parseInt(readlineSync.question('Your answer: '), 10);
-//   return answer;
-// };
-// startGame(randMathExpression);
-// calcGame();
-
-// export default startGame;
+// console.log(question);
+console.log(correctAnswer);
+// startGame(generateMathRandom, correctAnswer);

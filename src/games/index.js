@@ -13,27 +13,32 @@ import readlineSync from 'readline-sync';
 // };
 import greeting from './cli.js';
 
-const startGame = (question, correctAnswer) => {
+const startGame = (func, correctAnswer) => {
   greeting();
   console.log('What is the result of the expression?');
   let count = 0;
-  while (count < 3) {
-    const askQestion = readlineSync.question(question);
+  // while (count < 3) {
+  for (let i = 0; i < 3; i++) {
+    console.log(func());
 
-    console.log(askQestion);
-    const yourAnswer = parseInt(readlineSync.question('Your answer: '), 10);
-    // console.log(yourAnswer);
-    // console.log(correctAnswer);
-
-    if (correctAnswer === yourAnswer) {
-      count += 1;
-      console.log('Correct!');
-    } else {
-      count = 0;
-      console.log('These is wrong answer. Lets try again!');
-      break;
-    }
+    console.log(correctAnswer);
   }
+  // const askQestion = readlineSync.question(question);
+
+  // console.log(askQestion);
+  // const yourAnswer = parseInt(readlineSync.question('Your answer: '), 10);
+  // // console.log(yourAnswer);
+  // // console.log(correctAnswer);
+
+  // if (correctAnswer === yourAnswer) {
+  //   count += 1;
+  //   console.log('Correct!');
+  // } else {
+  //   count = 0;
+  //   console.log('These is wrong answer. Lets try again!');
+  //   break;
+  // }
+  // }
   if (count === 3) {
     console.log('Congratulations, you won!');
   }
