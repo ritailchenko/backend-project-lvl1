@@ -16,14 +16,15 @@ import greeting from './cli.js';
 const startGame = (question, correctAnswer) => {
   greeting();
   console.log('What is the result of the expression?');
-
-  console.log(question);
-  const yourAnswer = parseInt(readlineSync.question('Your answer: '), 10);
-  console.log(yourAnswer);
-
   let count = 0;
-
   while (count < 3) {
+    const askQestion = readlineSync.question(question);
+
+    console.log(askQestion);
+    const yourAnswer = parseInt(readlineSync.question('Your answer: '), 10);
+    // console.log(yourAnswer);
+    // console.log(correctAnswer);
+
     if (correctAnswer === yourAnswer) {
       count += 1;
       console.log('Correct!');

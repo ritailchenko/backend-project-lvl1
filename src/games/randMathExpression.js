@@ -37,16 +37,23 @@ const calcGame = () => {
   const randMathOperation =
     mathOperations[Math.floor(Math.random() * Math.floor(3))];
   // const question = `Question: ${randNumOne} ${randMathOperation} ${randNumTwo}`;
-  const question = readlineSync.question(
-    // eslint-disable-next-line comma-dangle
-    `Question: ${randNumOne} ${randMathOperation} ${randNumTwo}`
-  );
+  // const question = readlineSync.question(
+  //   // eslint-disable-next-line comma-dangle
+  //   `Question: ${randNumOne} ${randMathOperation} ${randNumTwo}`
+  // );
 
-  const correctAnswer = randMathExpression();
+  const question = `Question: ${randNumOne} ${randMathOperation} ${randNumTwo}`;
+
+  const correctAnswer = randMathExpression(
+    randMathOperation,
+    randNumOne,
+    randNumTwo
+  );
+  // console.log(correctAnswer);
   // return randMathOperation;
   startGame(question, correctAnswer);
 };
-
+// calcGame();
 export default calcGame;
 
 // const generateQuestion = () => {
