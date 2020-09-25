@@ -1,46 +1,36 @@
 import readlineSync from 'readline-sync';
 
-// export default (question, answer) => {
-// question = how many 1 + 1
-// answer = 2
-/*
- * 1) Поприветствовать
- * 2) Задать вопрос
- * 3) Получить ответ
- * 4) Сравнить правильный ответ и ответ пользователя
- * 5) Повторить
- */
-// };
-import greeting from './cli.js';
+const startGame = (func) => {
+  console.log('Welcome to the brain games!');
 
-const startGame = (func, correctAnswer) => {
-  greeting();
+  const name = readlineSync.question('what is your name?');
+  const nameCap = name.charAt(0).toUpperCase() + name.slice(1);
+
+  console.log(`Hi, ${nameCap}!`);
+
   console.log('What is the result of the expression?');
   let count = 0;
-  // while (count < 3) {
-  for (let i = 0; i < 3; i++) {
-    console.log(func());
 
-    console.log(correctAnswer);
+  while (count < 3) {
+    const { question, correctAnswer } = func();
+
+    readlineSync.question(question);
+
+    const yourAnswer = parseInt(readlineSync.question('Your answer: '), 10);
+
+    if (correctAnswer === yourAnswer) {
+      count += 1;
+      console.log('Correct!');
+    } else {
+      count = 0;
+      console.log(
+        `${yourAnswer} these is wrong answer. Lets try again ${nameCap}!`
+      );
+      break;
+    }
   }
-  // const askQestion = readlineSync.question(question);
-
-  // console.log(askQestion);
-  // const yourAnswer = parseInt(readlineSync.question('Your answer: '), 10);
-  // // console.log(yourAnswer);
-  // // console.log(correctAnswer);
-
-  // if (correctAnswer === yourAnswer) {
-  //   count += 1;
-  //   console.log('Correct!');
-  // } else {
-  //   count = 0;
-  //   console.log('These is wrong answer. Lets try again!');
-  //   break;
-  // }
-  // }
   if (count === 3) {
-    console.log('Congratulations, you won!');
+    console.log(`Congratulations, ${nameCap} you won!`);
   }
 };
 
