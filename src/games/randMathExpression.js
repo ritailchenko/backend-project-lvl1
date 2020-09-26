@@ -35,4 +35,8 @@ const generateMathRandom = () => {
   };
 };
 
-startGame(generateMathRandom);
+const game = () => {
+  startGame(generateMathRandom);
+};
+
+export default game;

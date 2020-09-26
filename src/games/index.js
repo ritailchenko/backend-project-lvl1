@@ -24,7 +24,7 @@ const startGame = (func) => {
     } else {
       count = 0;
       console.log(
-        `${yourAnswer} these is wrong answer. Lets try again ${nameCap}!`
+        `${yourAnswer} these is wrong answer. Correct answer is ${correctAnswer}. Lets try again ${nameCap}!`
       );
       break;
     }
