@@ -1,17 +1,22 @@
-// eslint-disable-next-line consistent-return
-const ifEven = (answer, num) => {
-  if (
-    // eslint-disable-next-line operator-linebreak
-    (num % 2 === 0 && answer === 'yes') ||
-    (num % 2 !== 0 && answer === 'no')
-  ) {
-    return true;
-    // eslint-disable-next-line no-else-return
-  } else if (answer !== 'y' || answer !== 'n') {
-    console.log('please write `yes` or `no`');
-  } else {
-    return false;
+import startGame from './index.js';
+
+const ifEven = (num) => {
+  if (num % 2 === 0) {
+    return 'yes';
   }
+  return 'no';
+};
+const questionToStart = `Answer 'yes' if the number is even, otherwise answer 'no'`;
+const generateMathRandom = () => {
+  const randNum = Math.floor(Math.random() * Math.floor(100));
+
+  const question = `Is these an odd number: ${randNum}`;
+  const correctAnswer = ifEven(randNum);
+
+  return {
+    question,
+    correctAnswer,
+  };
 };
 
-export default ifEven;
+export default () => startGame(generateMathRandom, questionToStart);

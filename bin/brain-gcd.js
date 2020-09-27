@@ -1,44 +1,5 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
-import greeting from '../src/games/cli.js';
-import biggestGcd from '../src/games/gcd.js';
 
-console.log('Welcome to the Brain Games!');
+import game from '../src/games/gcd.js';
 
-const name = readlineSync.question('May I have your name?');
-
-console.log(`Hi, ${greeting(name)}!`);
-
-console.log('Find the greatest common divisor of given numbers.');
-
-let count = 0;
-for (let i = 0; i < 3; i += 1) {
-  const randNumOne = Math.floor(Math.random() * Math.floor(100));
-  const randNumTwo = Math.floor(Math.random() * Math.floor(100));
-  const question = readlineSync.question(
-    // eslint-disable-next-line comma-dangle
-    `Question: ${randNumOne} ${randNumTwo}`
-  );
-  console.log(question);
-  const yourAnswer = parseInt(readlineSync.question('Your answer: '), 10);
-
-  if (biggestGcd(randNumOne, randNumTwo) === yourAnswer) {
-    count += 1;
-    console.log('Correct!');
-  } else {
-    count = 0;
-    console.log(
-      `${yourAnswer} is wrong answer. Correct answer is ${biggestGcd(
-        randNumOne,
-        // eslint-disable-next-line comma-dangle
-        randNumTwo
-        // eslint-disable-next-line comma-dangle
-      )}. Let's try again!`
-    );
-    break;
-  }
-}
-
-if (count === 3) {
-  console.log(`Congratulations, ${greeting(name)} you won!`);
-}
+game();

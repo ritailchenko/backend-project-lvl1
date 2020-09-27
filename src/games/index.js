@@ -1,14 +1,13 @@
 import readlineSync from 'readline-sync';
 
-const startGame = (func) => {
+const startGame = (func, questionToStart) => {
   console.log('Welcome to the brain games!');
 
   const name = readlineSync.question('what is your name?');
   const nameCap = name.charAt(0).toUpperCase() + name.slice(1);
 
   console.log(`Hi, ${nameCap}!`);
-
-  console.log('What is the result of the expression?');
+  console.log(questionToStart);
   let count = 0;
 
   while (count < 3) {
@@ -16,9 +15,9 @@ const startGame = (func) => {
 
     readlineSync.question(question);
 
-    const yourAnswer = parseInt(readlineSync.question('Your answer: '), 10);
+    const yourAnswer = readlineSync.question('Your answer: ');
 
-    if (correctAnswer === yourAnswer) {
+    if (correctAnswer.toString() === yourAnswer) {
       count += 1;
       console.log('Correct!');
     } else {

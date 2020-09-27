@@ -13,6 +13,7 @@ const randMathExpression = (randMathOperation, randNumOne, randNumTwo) => {
 
   return result;
 };
+const questionToStart = 'What is the result of the expression?';
 
 const generateMathRandom = () => {
   const mathOperations = ['*', '+', '-'];
@@ -29,14 +30,11 @@ const generateMathRandom = () => {
     randNumOne,
     randNumTwo
   );
+
   return {
     question,
     correctAnswer,
   };
 };
 
-const game = () => {
-  startGame(generateMathRandom);
-};
-
-export default game;
+export default () => startGame(generateMathRandom, questionToStart);
