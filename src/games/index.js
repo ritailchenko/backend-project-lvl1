@@ -23,6 +23,7 @@ const startGame = (func, questionToStart) => {
     } else {
       count = 0;
       console.log(
+        // eslint-disable-next-line comma-dangle
         `${yourAnswer} these is wrong answer. Correct answer is ${correctAnswer}. Lets try again ${nameCap}!`
       );
       break;

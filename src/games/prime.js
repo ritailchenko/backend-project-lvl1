@@ -9,6 +9,7 @@ const isPrime = (num) => {
   return 'yes';
 };
 
+// eslint-disable-next-line operator-linebreak
 const questionToStart =
   'Answer "yes" if given number is prime. Otherwise answer "no".';
 
