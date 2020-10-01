@@ -3,24 +3,22 @@ import startGame from './index.js';
 const questionToStart = 'What number is missing in the progression?';
 
 const generateMathRandom = () => {
-  const excludedNum = (num) => {
-    const progression = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
+  // const pickProgression = () => {
+  const progressions = [
+    [1, 3, 5, 7, 9, 11, 13, 15, 17, 19],
+    [0, 1, 1, 2, 3, 5, 8, 13, 21, 34],
+    [1, 4, 9, 16, 25, 36, 47, 64, 81, 100],
+  ];
+  const mathRandForProgression = Math.floor(Math.random() * Math.floor(3));
 
-    return progression[num];
-  };
+  const question = progressions[mathRandForProgression];
 
-  const printProgression = (num) => {
-    const progression = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19];
-    const index = progression.indexOf(num);
+  const mathRandForExcludeNum = Math.floor(Math.random() * Math.floor(9));
+  const correctAnswer = question[mathRandForExcludeNum];
+  const index = question.indexOf(correctAnswer);
+  //   // progression[index] = '..';
 
-    progression[index] = '..';
-    return progression;
-  };
-  const randNum = Math.floor(Math.random() * Math.floor(10));
-
-  const correctAnswer = excludedNum(randNum);
-
-  const question = `Question: ${printProgression(correctAnswer)}`;
+  question[index] = '..';
 
   return {
     question,
