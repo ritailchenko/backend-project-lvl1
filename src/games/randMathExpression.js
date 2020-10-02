@@ -1,31 +1,33 @@
-import startGame from './index.js';
+import startGame from '../index.js';
+import generateRandomNum from '../utils.js/generateRandom.js';
 
-const randMathExpression = (randMathOperation, randNumOne, randNumTwo) => {
-  let result = 0;
-
-  if (randMathOperation === '+') {
-    result = randNumOne + randNumTwo;
-  } else if (randMathOperation === '-') {
-    result = randNumOne - randNumTwo;
-  } else if (randMathOperation === '*') {
-    result = randNumOne * randNumTwo;
+const generateArithmeticOperation = (
+  randMathOperation,
+  randNumOne,
+  randNumTwo
+) => {
+  switch (randMathOperation) {
+    case '*':
+      return randNumOne * randNumTwo;
+    default:
+    case '+':
+      return randNumOne * randNumTwo;
+    case '-':
+      return randNumOne - randNumTwo;
   }
-
-  return result;
 };
 const questionToStart = 'What is the result of the expression?';
 
-const generateMathRandom = () => {
+const generateQuestionAndCorrectAnswer = () => {
   const mathOperations = ['*', '+', '-'];
 
-  const randNumOne = Math.floor(Math.random() * Math.floor(100));
-  const randNumTwo = Math.floor(Math.random() * Math.floor(100));
+  const randNumOne = generateRandomNum(100);
+  const randNumTwo = generateRandomNum(100);
   // eslint-disable-next-line operator-linebreak
-  const randMathOperation =
-    mathOperations[Math.floor(Math.random() * Math.floor(3))];
+  const randMathOperation = mathOperations[generateRandomNum(3)];
 
   const question = `Question: ${randNumOne} ${randMathOperation} ${randNumTwo}`;
-  const correctAnswer = randMathExpression(
+  const correctAnswer = generateArithmeticOperation(
     randMathOperation,
     randNumOne,
     randNumTwo
@@ -37,4 +39,5 @@ const generateMathRandom = () => {
   };
 };
 
-export default () => startGame(generateMathRandom, questionToStart);
+export default () =>
+  startGame(generateQuestionAndCorrectAnswer, questionToStart);

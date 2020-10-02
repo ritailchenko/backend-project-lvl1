@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import game from '../src/games/randMathExpression.js';
+import startGame from '../src/games/randMathExpression.js';
 
-game();
+startGame();
