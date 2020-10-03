@@ -11,7 +11,7 @@ const generateArithmeticOperation = (
       return randNumOne * randNumTwo;
     default:
     case '+':
-      return randNumOne * randNumTwo;
+      return randNumOne + randNumTwo;
     case '-':
       return randNumOne - randNumTwo;
   }
