@@ -5,6 +5,7 @@ env:
 
 extends:
   - 'airbnb-base'
+  - prettier
 
 parserOptions:
   ecmaVersion: 11
@@ -14,5 +15,3 @@ rules:
   no-console: 0
   import/extensions: 0 # FIXME: remove when rule will be adjusted for new nodejs version
   no-unused-vars: warn
-
-extends: prettier
