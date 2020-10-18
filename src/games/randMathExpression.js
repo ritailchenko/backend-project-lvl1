@@ -1,43 +1,42 @@
-import startGame from '../index.js';
-import generateRandomNum from '../utils.js/generateRandom.js';
+import startGame from '../index.js'
+import generateRandomNum from '../utils/generateRandom.js'
 
 const generateArithmeticOperation = (
-  randMathOperation,
-  randNumOne,
-  randNumTwo
+    randomMathOperation,
+    randomNumOne,
+    randomNumTwo
 ) => {
-  switch (randMathOperation) {
-    case '*':
-      return randNumOne * randNumTwo;
-    default:
-    case '+':
-      return randNumOne + randNumTwo;
-    case '-':
-      return randNumOne - randNumTwo;
-  }
-};
-const questionToStart = 'What is the result of the expression?';
-
+    switch (randomMathOperation) {
+        case '*':
+            return randomNumOne * randomNumTwo
+        case '+':
+            return randomNumOne + randomNumTwo
+        case '-':
+            return randomNumOne - randomNumTwo
+        default:
+            throw new Error(`Unknown operation: '${randomMathOperation}'!`)
+    }
+}
+const questionToStart = 'What is the result of the expression?'
+const mathOperations = ['*', '+', '-']
 const generateQuestionAndCorrectAnswer = () => {
-  const mathOperations = ['*', '+', '-'];
+    const randomNumOne = generateRandomNum(100)
+    const randomNumTwo = generateRandomNum(100)
+    // eslint-disable-next-line operator-linebreak
+    const randMathOperation = mathOperations[generateRandomNum(3)]
 
-  const randNumOne = generateRandomNum(100);
-  const randNumTwo = generateRandomNum(100);
-  // eslint-disable-next-line operator-linebreak
-  const randMathOperation = mathOperations[generateRandomNum(3)];
+    const question = `Question: ${randomNumOne} ${randMathOperation} ${randomNumTwo}`
+    const correctAnswer = generateArithmeticOperation(
+        randMathOperation,
+        randomNumOne,
+        randomNumTwo
+    )
 
-  const question = `Question: ${randNumOne} ${randMathOperation} ${randNumTwo}`;
-  const correctAnswer = generateArithmeticOperation(
-    randMathOperation,
-    randNumOne,
-    randNumTwo
-  );
-
-  return {
-    question,
-    correctAnswer,
-  };
-};
+    return {
+        question,
+        correctAnswer,
+    }
+}
 
 export default () =>
-  startGame(generateQuestionAndCorrectAnswer, questionToStart);
+    startGame(generateQuestionAndCorrectAnswer, questionToStart)
