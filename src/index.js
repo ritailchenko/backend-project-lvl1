@@ -15,7 +15,7 @@ const startGame = (generateTheGame, questionToStart) => {
   while (scoreOfTheGame < 3) {
     const { question, correctAnswer } = generateTheGame()
 
-    console.log(question)
+    console.log(`Question: ${question}`)
 
     const userAnswer = readlineSync.question('Your answer: ')
 

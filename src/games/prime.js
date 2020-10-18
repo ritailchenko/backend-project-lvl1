@@ -22,7 +22,7 @@ let correctAnswer
 const generateQuestionAndCorrectAnswer = () => {
   const randomNum = generateRandomNum(100)
 
-  const question = `Number: ${randomNum}`
+  const question = randomNum
 
   if (isPrime(randomNum)) {
     correctAnswer = 'yes'

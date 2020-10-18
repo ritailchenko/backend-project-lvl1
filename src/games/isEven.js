@@ -13,7 +13,7 @@ let correctAnswer
 const generateQuestionAndCorrectAnswer = () => {
   const randNum = generateRandomNum(100)
 
-  const question = `Question: ${randNum}`
+  const question = randNum
 
   if (isEven(randNum)) {
     correctAnswer = 'yes'
