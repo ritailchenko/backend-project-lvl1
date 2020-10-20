@@ -24,14 +24,17 @@ const startGame = (generateTheGame, questionToStart) => {
       console.log('Correct!')
     } else {
       console.log(
-        `${userAnswer} these is wrong answer. Correct answer is ${correctAnswer}. Lets try again ${nameCapitalized}!`
+        `${userAnswer} these is wrong answer. Correct answer is ${correctAnswer}. Lets try again ${nameCapitalized}!`,
       )
       break
     }
   }
-  if (scoreOfTheGame === 3) {
-    console.log(`Congratulations, ${nameCapitalized} you won!`)
+  const isGameOver = (score) => {
+    if (score === 3) {
+      console.log(`Congratulations, ${nameCapitalized} you won!`)
+    }
   }
+  isGameOver(scoreOfTheGame)
 }
 
 export default startGame

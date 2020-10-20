@@ -14,8 +14,7 @@ const isPrime = (num) => {
 }
 
 // eslint-disable-next-line operator-linebreak
-const questionToStart =
-  'Answer "yes" if given number is prime. Otherwise answer "no".'
+const questionToStart = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 let correctAnswer
 
@@ -36,5 +35,4 @@ const generateQuestionAndCorrectAnswer = () => {
   }
 }
 
-export default () =>
-  startGame(generateQuestionAndCorrectAnswer, questionToStart)
+export default () => startGame(generateQuestionAndCorrectAnswer, questionToStart)

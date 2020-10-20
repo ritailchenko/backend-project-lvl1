@@ -14,5 +14,4 @@ parserOptions:
 rules:
   no-console: 0
   import/extensions: 0 # FIXME: remove when rule will be adjusted for new nodejs version
-  # no-unused-vars: warn
-  max-len: ['error', { 'code': 80 }]
+  linebreak-style: 0

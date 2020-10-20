@@ -4,14 +4,23 @@ import generateRandomNumFromRange from '../utils/generateRandom.js'
 const questionToStart = 'What number is missing in the progression?'
 
 const generateQuestionAndCorrectAnswer = () => {
-  const progressions = [
-    [1, 3, 5, 7, 9, 11, 13, 15, 17, 19],
-    [0, 1, 1, 2, 3, 5, 8, 13, 21, 34],
-    [1, 4, 9, 16, 25, 36, 47, 64, 81, 100],
-  ]
-  const randomProgression = generateRandomNumFromRange(3)
+  const numberToStartProgression = generateRandomNumFromRange(10)
+  let stepInProgression = generateRandomNumFromRange(10)
+  const progression = []
+  const generateProgression = () => {
+    for (let i = numberToStartProgression; i <= 100; i += stepInProgression) {
+      if (stepInProgression === 1 || stepInProgression === 0) {
+        stepInProgression += 2
+      }
+      progression.push(i)
+      if (progression.length >= 10) {
+        break
+      }
+    }
+    return progression
+  }
 
-  const question = progressions[randomProgression]
+  const question = generateProgression()
 
   const indexOfMissingNumber = generateRandomNumFromRange(10)
 
@@ -24,7 +33,6 @@ const generateQuestionAndCorrectAnswer = () => {
     correctAnswer,
   }
 }
-generateRandomNumFromRange()
 
 export default () =>
   startGame(generateQuestionAndCorrectAnswer, questionToStart)
