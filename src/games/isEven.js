@@ -11,11 +11,11 @@ const questionToStart =
   'Answer `yes` if the number is even, otherwise answer `no`'
 let correctAnswer
 const generateQuestionAndCorrectAnswer = () => {
-  const randNum = generateRandomNum(100)
+  const number = generateRandomNum(100)
 
-  const question = randNum
+  const question = number
 
-  if (isEven(randNum)) {
+  if (isEven(number)) {
     correctAnswer = 'yes'
   } else {
     correctAnswer = 'no'
