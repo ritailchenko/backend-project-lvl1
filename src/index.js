@@ -1,19 +1,20 @@
 import readlineSync from 'readline-sync'
 import _ from 'lodash'
 
-const startGame = (generateTheGame, questionToStart) => {
-  console.log('Welcome to the brain games!')
+console.log('Welcome to the brain games!')
 
-  const name = readlineSync.question('what is your name?')
+const name = readlineSync.question('what is your name?')
 
-  const nameCapitalized = _.upperFirst(name)
+const nameCapitalized = _.upperFirst(name)
 
-  console.log(`Hi, ${nameCapitalized}!`)
+console.log(`Hi, ${nameCapitalized}!`)
+
+const startGame = (generateGame, questionToStart) => {
   console.log(questionToStart)
   let scoreOfTheGame = 0
 
   while (scoreOfTheGame < 3) {
-    const { question, correctAnswer } = generateTheGame()
+    const { question, correctAnswer } = generateGame()
 
     console.log(`Question: ${question}`)
 
