@@ -12,12 +12,12 @@ const getBiggestGcd = (num1, num2) => {
 const questionToStart = 'Find the greatest common divisor of given numbers.'
 
 const generateQuestionAndCorrectAnswer = () => {
-  const randNumOne = generateRandomNum(100)
-  const randNumTwo = generateRandomNum(100)
+  const firstNumber = generateRandomNum(100)
+  const secondNumber = generateRandomNum(100)
 
-  const question = `${randNumOne} ${randNumTwo}`
+  const question = `${firstNumber} ${secondNumber}`
 
-  const correctAnswer = getBiggestGcd(randNumOne, randNumTwo)
+  const correctAnswer = getBiggestGcd(firstNumber, secondNumber)
 
   return {
     question,

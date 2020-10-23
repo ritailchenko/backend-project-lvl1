@@ -4,7 +4,7 @@ import generateRandomNum from '../utils/generateRandom.js'
 const generateArithmeticOperation = (
   randomMathOperation,
   randomNumOne,
-  randomNumTwo
+  randomNumTwo,
 ) => {
   switch (randomMathOperation) {
     case '*':
@@ -20,16 +20,16 @@ const generateArithmeticOperation = (
 const questionToStart = 'What is the result of the expression?'
 const mathOperations = ['*', '+', '-']
 const generateQuestionAndCorrectAnswer = () => {
-  const randomNumOne = generateRandomNum(100)
-  const randomNumTwo = generateRandomNum(100)
+  const firstNumber = generateRandomNum(100)
+  const secondNumber = generateRandomNum(100)
   // eslint-disable-next-line operator-linebreak
   const randMathOperation = mathOperations[generateRandomNum(3)]
 
-  const question = `${randomNumOne} ${randMathOperation} ${randomNumTwo}`
+  const question = `${firstNumber} ${randMathOperation} ${secondNumber}`
   const correctAnswer = generateArithmeticOperation(
     randMathOperation,
-    randomNumOne,
-    randomNumTwo
+    firstNumber,
+    secondNumber,
   )
 
   return {
