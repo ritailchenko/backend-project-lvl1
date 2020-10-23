@@ -2,9 +2,6 @@ import startGame from '../index.js'
 import generateRandomNum from '../utils/generateRandom.js'
 
 const isPrime = (num) => {
-  if (num === 1 || num === 0) {
-    return false
-  }
   for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
       return false
@@ -20,7 +17,7 @@ const questionToStart =
 let correctAnswer
 
 const generateQuestionAndCorrectAnswer = () => {
-  const number = generateRandomNum(100)
+  const number = generateRandomNum(2, 101)
 
   const question = number
 

@@ -20,10 +20,10 @@ const generateArithmeticOperation = (
 const questionToStart = 'What is the result of the expression?'
 const mathOperations = ['*', '+', '-']
 const generateQuestionAndCorrectAnswer = () => {
-  const firstNumber = generateRandomNum(100)
-  const secondNumber = generateRandomNum(100)
+  const firstNumber = generateRandomNum(2, 101)
+  const secondNumber = generateRandomNum(2, 10)
   // eslint-disable-next-line operator-linebreak
-  const randMathOperation = mathOperations[generateRandomNum(3)]
+  const randMathOperation = mathOperations[generateRandomNum(0, 3)]
 
   const question = `${firstNumber} ${randMathOperation} ${secondNumber}`
   const correctAnswer = generateArithmeticOperation(

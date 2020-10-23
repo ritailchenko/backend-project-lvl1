@@ -1,5 +1,5 @@
-const generateRandomNumFromRange = (num) => {
-  const randomNum = Math.floor(Math.random() * Math.floor(num))
+const generateRandomNumFromRange = (min, max) => {
+  const randomNum = Math.floor(Math.random() * (max - min) + min)
   return randomNum
 }
 
