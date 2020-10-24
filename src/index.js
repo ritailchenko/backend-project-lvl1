@@ -8,10 +8,15 @@ const name = readlineSync.question('what is your name?')
 const nameCapitalized = _.upperFirst(name)
 
 console.log(`Hi, ${nameCapitalized}!`)
+let scoreOfTheGame = 0
 
+const isGameOver = (score) => {
+  if (score === 3) {
+    console.log(`Congratulations, ${nameCapitalized} you won!`)
+  }
+}
 const startGame = (generateGame, questionToStart) => {
   console.log(questionToStart)
-  let scoreOfTheGame = 0
 
   while (scoreOfTheGame < 3) {
     const { question, correctAnswer } = generateGame()
@@ -30,12 +35,8 @@ const startGame = (generateGame, questionToStart) => {
       break
     }
   }
-  const isGameOver = (score) => {
-    if (score === 3) {
-      console.log(`Congratulations, ${nameCapitalized} you won!`)
-    }
-  }
-  isGameOver(scoreOfTheGame)
+  return isGameOver(scoreOfTheGame)
 }
 
 export default startGame
+// export default startGame
