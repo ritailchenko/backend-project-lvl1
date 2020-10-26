@@ -1,35 +1,40 @@
-import startGame from '../index.js'
-import generateRandomNumFromRange from '../utils/generateRandom.js'
+import startGame from '../index.js';
+import generateRandomNumFromRange from '../utils/generateRandom.js';
 
-const questionToStart = 'What number is missing in the progression?'
+const questionToStart = 'What number is missing in the progression?';
 
-const generateProgression = () => {
-  const numberToStartProgression = generateRandomNumFromRange(2, 11)
-  const stepInProgression = generateRandomNumFromRange(2, 11)
-  const progression = []
+const generateProgression = (
+  numberToStartProgression,
+  stepInProgression,
+  progressionLength,
+) => {
+  const progression = [];
   for (
     let i = numberToStartProgression;
-    progression.length < 10;
+    progression.length < progressionLength;
     i += stepInProgression
   ) {
-    progression.push(i)
+    progression.push(i);
   }
-  return progression
-}
+  return progression;
+};
 const generateQuestionAndCorrectAnswer = () => {
-  const question = generateProgression()
+  const question = generateProgression(
+    generateRandomNumFromRange(2, 11),
+    generateRandomNumFromRange(2, 11),
+    10,
+  );
 
-  const indexOfMissingNumber = generateRandomNumFromRange(0, 10)
+  const indexOfMissingNumber = generateRandomNumFromRange(0, 10);
 
-  const correctAnswer = question[indexOfMissingNumber]
+  const correctAnswer = question[indexOfMissingNumber];
 
-  question[indexOfMissingNumber] = '..'
+  question[indexOfMissingNumber] = '..';
 
   return {
     question,
     correctAnswer,
-  }
-}
+  };
+};
 
-export default () =>
-  startGame(generateQuestionAndCorrectAnswer, questionToStart)
+export default () => startGame(generateQuestionAndCorrectAnswer, questionToStart);

@@ -1,42 +1,48 @@
-import readlineSync from 'readline-sync'
-import _ from 'lodash'
+import readlineSync from 'readline-sync';
+import _ from 'lodash';
 
-console.log('Welcome to the brain games!')
+console.log('Welcome to the brain games!');
 
-const name = readlineSync.question('what is your name?')
+const name = readlineSync.question('what is your name?');
 
-const nameCapitalized = _.upperFirst(name)
+const nameCapitalized = _.upperFirst(name);
 
-console.log(`Hi, ${nameCapitalized}!`)
-let scoreOfTheGame = 0
+console.log(`Hi, ${nameCapitalized}!`);
+let scoreOfTheGame = 0;
 
 const isGameOver = (score) => {
   if (score === 3) {
-    console.log(`Congratulations, ${nameCapitalized} you won!`)
+    return true;
   }
-}
+  return false;
+};
 const startGame = (generateGame, questionToStart) => {
-  console.log(questionToStart)
+  console.log(questionToStart);
 
-  while (scoreOfTheGame < 3) {
-    const { question, correctAnswer } = generateGame()
+  for (let i = 0; i <= 3; i += 1) {
+    const { question, correctAnswer } = generateGame();
 
-    console.log(`Question: ${question}`)
+    console.log(`Question: ${question}`);
 
-    const userAnswer = readlineSync.question('Your answer: ')
+    const userAnswer = readlineSync.question('Your answer: ');
 
     if (correctAnswer.toString() === userAnswer) {
-      scoreOfTheGame += 1
-      console.log('Correct!')
+      scoreOfTheGame += 1;
+      console.log('Correct!');
     } else {
       console.log(
         `${userAnswer} these is wrong answer. Correct answer is ${correctAnswer}. Lets try again ${nameCapitalized}!`,
-      )
-      break
+      );
+      break;
+    }
+    console.log(scoreOfTheGame);
+    if (scoreOfTheGame === 3) {
+      isGameOver(scoreOfTheGame);
     }
   }
-  return isGameOver(scoreOfTheGame)
+};
+if (isGameOver(scoreOfTheGame)) {
+  console.log(`Congratulations, ${nameCapitalized} you won!`);
 }
 
-export default startGame
-// export default startGame
+export default startGame;
