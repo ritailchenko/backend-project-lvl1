@@ -10,16 +10,10 @@ const nameCapitalized = _.upperFirst(name);
 console.log(`Hi, ${nameCapitalized}!`);
 let scoreOfTheGame = 0;
 
-const isGameOver = (score) => {
-  if (score === 3) {
-    return true;
-  }
-  return false;
-};
 const startGame = (generateGame, questionToStart) => {
   console.log(questionToStart);
 
-  for (let i = 0; i <= 3; i += 1) {
+  for (let i = 0; i < 3; i += 1) {
     const { question, correctAnswer } = generateGame();
 
     console.log(`Question: ${question}`);
@@ -35,14 +29,10 @@ const startGame = (generateGame, questionToStart) => {
       );
       break;
     }
-    console.log(scoreOfTheGame);
-    if (scoreOfTheGame === 3) {
-      isGameOver(scoreOfTheGame);
-    }
+  }
+  if (scoreOfTheGame === 3) {
+    console.log(`Congratulations, ${nameCapitalized} you won!`);
   }
 };
-if (isGameOver(scoreOfTheGame)) {
-  console.log(`Congratulations, ${nameCapitalized} you won!`);
-}
 
 export default startGame;

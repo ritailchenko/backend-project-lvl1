@@ -38,5 +38,4 @@ const generateQuestionAndCorrectAnswer = () => {
   };
 };
 
-export default () =>
-  startGame(generateQuestionAndCorrectAnswer, questionToStart);
+export default () => startGame(generateQuestionAndCorrectAnswer, questionToStart);

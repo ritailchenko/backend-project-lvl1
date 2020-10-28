@@ -8,8 +8,7 @@ const isEven = (num) => {
   return false;
 };
 
-const questionToStart =
-  'Answer `yes` if the number is even, otherwise answer `no`';
+const questionToStart = 'Answer `yes` if the number is even, otherwise answer `no`';
 let correctAnswer;
 const generateQuestionAndCorrectAnswer = () => {
   const number = generateRandomNum(2, 11);
@@ -28,5 +27,4 @@ const generateQuestionAndCorrectAnswer = () => {
   };
 };
 
-export default () =>
-  startGame(generateQuestionAndCorrectAnswer, questionToStart);
+export default () => startGame(generateQuestionAndCorrectAnswer, questionToStart);
