@@ -3,10 +3,11 @@ import generateRandomNumFromRange from '../utils/generateRandom.js';
 
 const questionToStart = 'What number is missing in the progression?';
 
+const progressionLength = 10;
+
 const generateProgression = (
   numberToStartProgression,
   stepInProgression,
-  progressionLength,
 ) => {
   const progression = [];
   for (
@@ -22,7 +23,7 @@ const generateQuestionAndCorrectAnswer = () => {
   const question = generateProgression(
     generateRandomNumFromRange(2, 11),
     generateRandomNumFromRange(2, 11),
-    10,
+    progressionLength,
   );
 
   const indexOfMissingNumber = generateRandomNumFromRange(0, 10);

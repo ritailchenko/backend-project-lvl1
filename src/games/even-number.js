@@ -15,11 +15,7 @@ const generateQuestionAndCorrectAnswer = () => {
 
   const question = number;
 
-  if (isEven(number)) {
-    correctAnswer = 'yes';
-  } else {
-    correctAnswer = 'no';
-  }
+  correctAnswer = isEven(number) ? 'yes' : 'no';
 
   return {
     question,
