@@ -9,13 +9,13 @@ const isEven = (num) => {
 };
 
 const questionToStart = 'Answer `yes` if the number is even, otherwise answer `no`';
-let correctAnswer;
+
 const generateQuestionAndCorrectAnswer = () => {
   const number = generateRandomNum(2, 11);
 
   const question = number;
 
-  correctAnswer = isEven(number) ? 'yes' : 'no';
+  const correctAnswer = isEven(number) ? 'yes' : 'no';
 
   return {
     question,
