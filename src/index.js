@@ -9,13 +9,9 @@ const nameCapitalized = _.upperFirst(name);
 
 console.log(`Hi, ${nameCapitalized}!`);
 let scoreOfTheGame = 0;
+const numberOfRounds = 3;
 
-const isGameOver = (score) => {
-  if (score === 3) {
-    return true;
-  }
-  return false;
-};
+const isGameOver = (score) => score === numberOfRounds;
 
 const startGame = (generateGame, questionToStart) => {
   console.log(questionToStart);
