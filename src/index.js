@@ -1,19 +1,19 @@
 import readlineSync from 'readline-sync';
 import _ from 'lodash';
 
-console.log('Welcome to the brain games!');
-
-const name = readlineSync.question('what is your name?');
-
-const nameCapitalized = _.upperFirst(name);
-
-console.log(`Hi, ${nameCapitalized}!`);
 let scoreOfTheGame = 0;
 const numberOfRounds = 3;
 
 const isGameOver = (score) => score === numberOfRounds;
 
 const startGame = (generateGame, questionToStart) => {
+  console.log('Welcome to the brain games!');
+
+  const name = readlineSync.question('what is your name?');
+
+  const nameCapitalized = _.upperFirst(name);
+
+  console.log(`Hi, ${nameCapitalized}!`);
   console.log(questionToStart);
 
   for (let i = 0; i < 3; i += 1) {
