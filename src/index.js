@@ -23,15 +23,14 @@ const startGame = (generateGame, questionToStart) => {
 
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (correctAnswer.toString() === userAnswer) {
-      scoreOfTheGame += 1;
-      console.log('Correct!');
-    } else {
+    if (correctAnswer.toString() !== userAnswer) {
       console.log(
         `${userAnswer} these is wrong answer. Correct answer is ${correctAnswer}. Lets try again ${nameCapitalized}!`,
       );
       break;
     }
+    scoreOfTheGame += 1;
+    console.log('Correct!');
   }
 
   if (isGameOver(scoreOfTheGame)) {
