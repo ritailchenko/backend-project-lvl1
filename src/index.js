@@ -16,7 +16,7 @@ const startGame = (generateGame, questionToStart) => {
   console.log(`Hi, ${nameCapitalized}!`);
   console.log(questionToStart);
 
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < numberOfRounds; i += 1) {
     const { question, correctAnswer } = generateGame();
 
     console.log(`Question: ${question}`);
