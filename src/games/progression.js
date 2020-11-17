@@ -20,20 +20,20 @@ const generateProgression = (
   return progression;
 };
 const generateQuestionAndCorrectAnswer = () => {
-  const question = generateProgression(
+  const progression = generateProgression(
     generateRandomNumFromRange(2, 11),
     generateRandomNumFromRange(2, 11),
     progressionLength,
   );
 
-  const indexOfMissingNumber = generateRandomNumFromRange(0, 10);
+  const indexOfMissingNumber = generateRandomNumFromRange(0, progressionLength);
 
-  const correctAnswer = question[indexOfMissingNumber];
+  const correctAnswer = progression[indexOfMissingNumber].toString();
 
-  question[indexOfMissingNumber] = '..';
+  progression[indexOfMissingNumber] = '..';
 
   return {
-    question,
+    question: progression.join(', '),
     correctAnswer,
   };
 };

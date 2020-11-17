@@ -1,10 +1,7 @@
 import readlineSync from 'readline-sync';
 import _ from 'lodash';
 
-let scoreOfTheGame = 0;
 const numberOfRounds = 3;
-
-const isGameOver = (score) => score === numberOfRounds;
 
 const startGame = (generateGame, questionToStart) => {
   console.log('Welcome to the brain games!');
@@ -23,19 +20,16 @@ const startGame = (generateGame, questionToStart) => {
 
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (correctAnswer.toString() !== userAnswer) {
+    if (correctAnswer !== userAnswer) {
       console.log(
         `${userAnswer} these is wrong answer. Correct answer is ${correctAnswer}. Lets try again ${nameCapitalized}!`,
       );
-      break;
+      return;
     }
-    scoreOfTheGame += 1;
     console.log('Correct!');
   }
 
-  if (isGameOver(scoreOfTheGame)) {
-    console.log(`Congratulations, ${nameCapitalized} you won!`);
-  }
+  console.log(`Congratulations, ${nameCapitalized} you won!`);
 };
 
 export default startGame;
