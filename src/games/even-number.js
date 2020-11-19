@@ -8,7 +8,7 @@ const questionToStart = 'Answer `yes` if the number is even, otherwise answer `n
 const generateQuestionAndCorrectAnswer = () => {
   const number = generateRandomNum(2, 11);
 
-  const question = number;
+  const question = number.toString();
 
   const correctAnswer = isEven(number) ? 'yes' : 'no';
 

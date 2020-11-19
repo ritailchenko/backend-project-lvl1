@@ -18,7 +18,7 @@ const questionToStart = 'Answer "yes" if given number is prime. Otherwise answer
 const generateQuestionAndCorrectAnswer = () => {
   const number = generateRandomNum(2, 101);
 
-  const question = number;
+  const question = number.toString();
 
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
 

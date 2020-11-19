@@ -26,6 +26,7 @@ const generateQuestionAndCorrectAnswer = () => {
   const randMathOperation = mathOperations[generateRandomNum(0, mathOperations.length)];
 
   const question = `${firstNumber} ${randMathOperation} ${secondNumber}`;
+
   const correctAnswer = generateArithmeticOperation(
     randMathOperation,
     firstNumber,
